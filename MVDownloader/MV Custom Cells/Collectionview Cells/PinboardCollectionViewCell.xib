@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PinboardCollectionViewCell" id="gTV-IL-0wX" customClass="PinboardCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="233" height="192"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="233" height="192"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mqn-V0-1cL">
+                        <rect key="frame" x="0.0" y="0.0" width="233" height="154"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFp-y6-9cZ">
+                        <rect key="frame" x="0.0" y="154" width="233" height="38"/>
+                        <color key="backgroundColor" red="0.33333333329999998" green="0.67450980390000004" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="m9t-18-g7M">
+                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                            </constraint>
+                        </constraints>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                        <state key="normal" title="Cancel Download">
+                            <color key="titleColor" red="0.8980392157" green="0.90196078430000004" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="cancelDownload:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Lh0-6B-mjI"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Mqn-V0-1cL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0UN-KL-Jk4"/>
+                <constraint firstItem="SFp-y6-9cZ" firstAttribute="top" secondItem="Mqn-V0-1cL" secondAttribute="bottom" id="498-cR-3IX"/>
+                <constraint firstAttribute="trailing" secondItem="SFp-y6-9cZ" secondAttribute="trailing" id="6qg-IU-cCn"/>
+                <constraint firstAttribute="bottom" secondItem="SFp-y6-9cZ" secondAttribute="bottom" id="FDG-Vd-A35"/>
+                <constraint firstItem="SFp-y6-9cZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FRM-Ll-Vuh"/>
+                <constraint firstItem="Mqn-V0-1cL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PJ9-64-Cu8"/>
+                <constraint firstItem="SFp-y6-9cZ" firstAttribute="top" secondItem="Mqn-V0-1cL" secondAttribute="bottom" id="tfl-q4-JAW"/>
+                <constraint firstAttribute="trailing" secondItem="Mqn-V0-1cL" secondAttribute="trailing" id="u1X-mo-AkK"/>
+            </constraints>
+            <size key="customSize" width="233" height="192"/>
+            <connections>
+                <outlet property="cancelDownloadBtn" destination="SFp-y6-9cZ" id="OTk-5k-lUJ"/>
+                <outlet property="displayImage" destination="Mqn-V0-1cL" id="BRl-gb-scQ"/>
+            </connections>
+            <point key="canvasLocation" x="-66.5" y="123"/>
+        </collectionViewCell>
+    </objects>
+</document>
